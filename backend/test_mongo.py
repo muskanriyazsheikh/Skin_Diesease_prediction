@@ -5,7 +5,7 @@ Quick test to verify MongoDB is working properly.
 """
 
 from flask import Flask
-from extensions import init_mongo, mongo_db, mongo_client
+from extensions import init_mongo, get_mongo_db, get_mongo_client
 from config import config
 from datetime import datetime
 
@@ -20,8 +20,11 @@ print(f"✓ MongoDB initialized")
 
 # Test with app context
 with app.app_context():
+    mongo_db = get_mongo_db()
+    mongo_client = get_mongo_client()
+    
     print(f"\nMongo DB: {mongo_db}")
-    print(f"Mongo DB name: {mongo_db.name if mongo_db else 'N/A'}")
+    print(f"Mongo DB name: {mongo_db.name if mongo_db is not None else 'N/A'}")
     
     # Test connection
     try:
