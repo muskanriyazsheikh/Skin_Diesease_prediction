@@ -1,0 +1,42 @@
+{
+  "total_images": 9873,
+  "class_distribution": {
+    "akiec": {
+      "name": "Actinic keratoses",
+      "count": 327
+    },
+    "bcc": {
+      "name": "Basal cell carcinoma",
+      "count": 514
+    },
+    "bkl": {
+      "name": "Benign keratosis-like lesions",
+      "count": 1099
+    },
+    "df": {
+      "name": "Dermatofibroma",
+      "count": 115
+    },
+    "mel": {
+      "name": "Melanoma",
+      "count": 1113
+    },
+    "nv": {
+      "name": "Melanocytic nevi",
+      "count": 6705
+    },
+    "vas": {
+      "name": "Vascular lesions",
+      "count": 0
+    }
+  },
+  "classes": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vas"
+  ]
+}
