@@ -1,10 +1,11 @@
-"""
+""" 
 Flask Extensions
 =================
 Initialize all Flask extensions here to avoid circular imports.
 """
 
 from pymongo import MongoClient
+import certifi
 
 # MongoDB instances
 _mongo_client = None
@@ -27,7 +28,14 @@ def init_mongo(app):
     db_name = app.config.get('MONGO_DBNAME', 'skin_prediction_db')
     
     try:
-        _mongo_client = MongoClient(mongo_uri, serverSelectionTimeoutMS=5000)
+        _mongo_client = MongoClient(
+            mongo_uri,
+            serverSelectionTimeoutMS=10000,
+            tls=True,
+            tlsCAFile=certifi.where(),
+            connectTimeoutMS=10000,
+            socketTimeoutMS=10000
+        )
         # Test connection
         _mongo_client.admin.command('ping')
         _mongo_db = _mongo_client[db_name]
