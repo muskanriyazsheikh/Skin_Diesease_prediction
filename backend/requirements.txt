@@ -4,7 +4,7 @@ numpy==1.26.4
 Pillow==11.0.0
 flask-cors==4.0.0
 gunicorn==21.2.0
-h5py==3.10.0
+h5py==3.11.0
 pymongo>=4.6.0
 certifi
 flask-pymongo==2.3.0
