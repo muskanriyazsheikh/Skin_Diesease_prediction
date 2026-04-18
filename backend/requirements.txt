@@ -10,6 +10,6 @@ certifi
 flask-pymongo==2.3.0
 python-dotenv==1.0.0
 Werkzeug==3.0.1
-scikit-learn==1.3.2
+scikit-learn==1.5.0
 matplotlib==3.8.2
 seaborn==0.13.0
