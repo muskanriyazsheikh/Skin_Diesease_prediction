@@ -38,8 +38,7 @@ A complete production-ready web application that uses Convolutional Neural Netwo
 ### Backend
 - **Framework**: Flask (Python)
 - **Machine Learning**: TensorFlow 2.15.0, Keras
-- **Database**: SQLite (with SQLAlchemy ORM)
-- **Production Server**: Gunicorn
+- **Database**: Mongodb atlas
 - **API**: RESTful architecture
 
 ### Frontend
